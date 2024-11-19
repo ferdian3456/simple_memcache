@@ -1,0 +1,10 @@
+services:
+  memcached:
+    image: memcached
+    container_name: memcached
+    command:
+      - --conn-limit=1024
+      - --memory-limit=64
+      - --threads=4
+    ports:
+      - "11211:11211"
